@@ -16,7 +16,7 @@ import * as mainFunctions from './js/functions.js';
 // mainFunctions.addLoadedClass();
 
 /* Модуль для роботи з меню (Бургер) */
-// mainFunctions.menuInit();
+mainFunctions.menuInit();
 
 /* Форматування чисел */
 // import './libs/wNumb.min.js';

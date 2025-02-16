@@ -8,8 +8,8 @@
     align-items: center;
     justify-content: center;
     border-radius: toRem(60);
-    background-color: $bgColorLight;
-    color: #fff;
+    background: linear-gradient(0deg, rgba(255, 193, 58, 1) 0%, rgba(229, 66, 27, 1) 66%, rgba(251, 126, 96, 1) 100%);
+        color: white;
     font-size: toRem(24);
     font-weight: 700;
     line-height: 1.33;
@@ -17,7 +17,7 @@
 
     @media (any-hover: hover) {
         &:hover {
-            background-color: $bgColorSemi;
+            background: linear-gradient(90.00deg, rgba(255, 193, 58, 0.5) 17%, rgba(229, 66, 27, 0.5) 51.5%, rgba(251, 126, 96, 0.5) 95.5%);
         }
     }
 
@@ -27,26 +27,7 @@
 
 
 
-    &--icon {
-        span {
-            display: flex;
-            align-items: center;
-            padding-left: toRem(16);
-            gap: toRem(16);
-
-            &::after {
-                content: '';
-                background: url('img/icons/phone-blue.svg') center no-repeat;
-                flex: 0 0 toRem(48);
-                width: toRem(48);
-                height: toRem(48);
-                border-radius: 50%;
-                background-color: #fff;
-            }
-        }
-    }
-
-    &--fw {
-        width: 100%;
+ &--fw {
+     width: 100%;
     }
 }
