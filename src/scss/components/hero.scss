@@ -3,7 +3,9 @@
         align-items: center;
         justify-content: center;
         padding-top: toRem(80);
+        padding-bottom: toRem(60);
         background-color: #fffcf9;
+
     }
 
 .hero__container {
@@ -117,6 +119,46 @@
     max-width: 400px;
 }
 
+@media (max-width:$tablet) {
+    .hero__container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .body-hero__image {
+        margin-bottom: toRem(24);
+    }
+
+    // .body-hero__content {
+    //     align-items: center;
+    //     order: 1;
+    // }
+
+    // .header-hero__text {
+    //     order: 1;
+    // }
+
+    // .header-hero__title {
+    //     order: 2;
+    // }
+
+    // .header-hero__date {
+    //     order: 3;
+    // }
+
+
+
+    // .body-hero__info {
+    //     order: 5;
+    //     text-align: center;
+
+    //     .body-hero__button {
+    //         order: 6;
+    //     }
+    // }
+}
 // /* Адаптив для планшетів та мобільних */
 // @media (max-width: 768px) {
 //     .hero__container {
