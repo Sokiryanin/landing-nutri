@@ -1,0 +1,124 @@
+
+
+.benefit {
+
+background-color: #fffcf9;
+
+
+    // .benefit__container
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+    }
+
+    &__container::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 453px; /* Настроить размер */
+        height: 463px;
+        background: url("img/benefit/avocado.png") no-repeat center / cover;
+        opacity: 0.6;
+         /* Полупрозрачность */
+        z-index: 0;
+    }
+
+    // .benefit__header
+
+    &__header {
+
+font-weight: 500;
+font-size: toRem(32);
+line-height: 1.5;
+text-align: center;
+color: #385030;
+margin-bottom: toRem(32);
+    }
+
+    // .benefit__items
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: toRem(16) ;
+        column-gap: toRem(16);
+        z-index: 10;
+    }
+
+    // .benefit__item
+
+    &__item {
+        padding: toRem(10);
+        padding-bottom: 20px;
+        background-color: #eaefe3;
+        border-radius: toRem(20);
+        margin-bottom: toRem(24);
+        max-width: 542px;
+    }
+
+    // .benefit__button
+
+    &__button {
+
+   @media (max-width:$tablet) {
+
+max-width: 544px;
+}
+
+    }
+}
+
+
+
+
+.item-benefit {
+
+    // .item-benefit__image
+
+    &__image {
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: toRem(18);
+        img {
+            width: 100%;
+        }
+    }
+
+    // .item-benefit__text
+    &__text {
+        padding-left: toRem(12);
+        font-weight: 400;
+        line-height: 1.5;
+        color: #385030;
+    }
+
+
+
+    &__text p {
+        position: relative;
+        padding-left: 16px; /* 6px точка + 10px отступ */
+
+    }
+
+
+&__text p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: #385030; /* Цвет точки */
+    border-radius: 50%; /* Делаем точку круглой */
+    transform: translateY(-50%); /* Выравниваем по центру */
+}
+}
+

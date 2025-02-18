@@ -3,21 +3,21 @@
 
 .button {
     display: inline-flex;
-    padding: toRem(8);
-    min-height: toRem(64);
+    padding: toRem(10) toRem(30);
+        min-height: toRem(44);
     align-items: center;
     justify-content: center;
-    border-radius: toRem(60);
+    border-radius: toRem(28);
     background: linear-gradient(0deg, rgba(255, 193, 58, 1) 0%, rgba(229, 66, 27, 1) 66%, rgba(251, 126, 96, 1) 100%);
         color: white;
-    font-size: toRem(24);
+    font-size: toRem(14);
     font-weight: 700;
-    line-height: 1.33;
-    transition: background-color 0.3s ease;
+transition: all 0.3s ease, transform 0.2s ease;
 
     @media (any-hover: hover) {
         &:hover {
             background: linear-gradient(90.00deg, rgba(255, 193, 58, 0.5) 17%, rgba(229, 66, 27, 0.5) 51.5%, rgba(251, 126, 96, 0.5) 95.5%);
+            transform: scale(1.1);
         }
     }
 
