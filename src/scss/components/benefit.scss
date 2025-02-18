@@ -51,6 +51,7 @@ margin-bottom: toRem(32);
         row-gap: toRem(16) ;
         column-gap: toRem(16);
         z-index: 10;
+        margin-bottom: toRem(24);
     }
 
     // .benefit__item
@@ -60,7 +61,7 @@ margin-bottom: toRem(32);
         padding-bottom: 20px;
         background-color: #eaefe3;
         border-radius: toRem(20);
-        margin-bottom: toRem(24);
+
         max-width: 542px;
     }
 
@@ -68,9 +69,8 @@ margin-bottom: toRem(32);
 
     &__button {
 
-   @media (max-width:$tablet) {
-
-max-width: 544px;
+@media (max-width:$tablet) {
+    max-width: 544px;
 }
 
     }

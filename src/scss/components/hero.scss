@@ -1,87 +1,155 @@
 .hero {
-    background-color: $bgColor;
-    padding: toRem(80) toRem(15) toRem(60) toRem(15);
-    // .hero__container
-
-    &__container {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: toRem(80);
+        background-color: #fffcf9;
     }
 
-    // .hero__body
+.hero__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
-    &__body {
-    }
 }
-.body-hero {
-
-    // .body-hero__image
-
-    &__image {
-    }
-
-    // .body-hero__header
-
-    &__header {
-    }
-
-    // .body-hero__info
-
-    &__info {
-        text-align: center;
-    }
-
-    // .body-hero__info-text
-
-    &__info-text {
-
-font-weight: 400;
-font-size: 20px;
-text-align: center;
-color: #000;
-    }
-
-    // .body-hero__button
-
-    &__button {
-    }
+.hero__container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    /* Отступ, чтобы не залезать под хедер */
+    left: 0;
+    width: toRem(410);
+    /* Подбираем размер */
+    height: toRem(410);
+    background: url('img/hero/gradient.svg') no-repeat;
+    background-size: contain;
 }
-.header-hero {
+
+
+.hero__container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: toRem(410);
+    height: toRem(410);
+    background: url('img/hero/gradient.svg') no-repeat;
+    background-size: contain;
+}
+
+
+
+.body-hero__image {
+    display: flex;
+    justify-content: center;
+
+}
+
+.body-hero__image img {
+    max-width: 100%;
+
+}
+
+.body-hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-hero__text {
+
+    font-weight: 400;
+        font-size: toRem(24);
+            text-align: center;
+                color: #000;
+                margin-bottom: toRem(4);
+    }
+
+.header-hero__title {
+    align-items: center;
     text-align: center;
-    // .header-hero__text
+    font-weight: 700;
+    font-size: toRem(40);
+    color: #385030;
+        margin-bottom: toRem(24);
+    }
+.header-hero__date {
+    border-radius: toRem(20);
+    padding-top: toRem(6);
+    padding-bottom: toRem(6);
+    width: 100%;
+    background-color: #eaefe3;
+    color: #ee6c4d;
 
-    &__text {
-
-font-weight: 400;
-font-size: toRem(24);
-
-color: $mainColor;
+    font-weight: 600;
+        font-size: toRem(20);
+        line-height: 1.4;
+    text-align: center;
+    
+        margin-bottom: toRem(24);
     }
 
-    // .header-hero__title
+.body-hero__info {
+    font-weight: 400;
+    font-size: toRem(20);
+    text-align: center;
+    color: #000;
 
-    &__title {
-
-font-weight: 700;
-font-size: toRem(40);
-color: $greenColor;
+    margin-bottom: toRem(24);
     }
-
-    // .header-hero__date
-
-    &__date {
-
-font-weight: 600;
-font-size: toRem(20);
-line-height: 1.4;
-color: #ee6c4d;
-
-border-radius: toRem(20);
-padding: toRem(6) toRem(10);
-width: 100%;
-background-color: #eaefe3;
-
-    }
-}
 
 .body-hero__button {
+    display: inline-block;
+        background: linear-gradient(0deg, rgba(255, 193, 58, 1) 0%, rgba(229, 66, 27, 1) 66%, rgba(251, 126, 96, 1) 100%);
+        color: white;
+        padding: 15px 24px;
+        border-radius: 25px;
+        font-weight: bold;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        text-align: center;
     width: 100%;
+    max-width: 400px;
 }
+
+// /* Адаптив для планшетів та мобільних */
+// @media (max-width: 768px) {
+//     .hero__container {
+//         display: flex;
+//         flex-direction: column;
+//         text-align: center;
+//         align-items: center;
+//     }
+// .body-hero__content {
+//     align-items: center;
+//     order: 1;
+
+// .header-hero__text {
+//         order: 1;
+//     }
+
+// .header-hero__title {
+//     order: 2;
+// }
+// .header-hero__date {
+//     order: 3;
+// }
+// .body-hero__image {
+//     order: 4;
+//     margin: 20px 0;
+// }
+
+// .body-hero__info {
+//     order: 5;
+//     text-align: center;
+
+//     .body-hero__button {
+//             order: 6;
+// }
+// }
+// }
