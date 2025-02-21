@@ -4,6 +4,9 @@
 
 background-color: #fffcf9;
 
+@media (max-width: $tablet) {
+        padding-bottom: toRem(60);
+    }
 
     // .benefit__container
 
@@ -35,11 +38,11 @@ background-color: #fffcf9;
     &__header {
 
 font-weight: 500;
-font-size: toRem(32);
 line-height: 1.5;
 text-align: center;
 color: #385030;
 margin-bottom: toRem(32);
+@include adaptiveValue("font-size", 32, 24);
     }
 
     // .benefit__items
@@ -68,9 +71,10 @@ margin-bottom: toRem(32);
     // .benefit__button
 
     &__button {
+        @include adaptiveValue("font-size", 14, 12);
 
 @media (max-width:$tablet) {
-    max-width: 544px;
+    max-width: 100%;
 }
 
     }

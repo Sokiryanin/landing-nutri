@@ -68,7 +68,7 @@ mainFunctions.menuInit();
 // ================================================================
 
 /* Динамічний адаптив */
-// import './js/dynamic_adapt.js';
+import './js/dynamic_adapt.js';
 
 /* 
 Модуль "Попапи"
