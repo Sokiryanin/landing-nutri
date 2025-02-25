@@ -1,0 +1,22 @@
+.bonus {
+  padding-right: toRem(15);
+  padding-left: toRem(15);
+  padding-top: toRem(30);
+}
+.bonus__container {
+  border-radius: toRem(20);
+  padding: toRem(31);
+  background: radial-gradient(147.82% 77.61% at 55.63% 45.08%, #7fb66d 0%, #385030 100%);
+}
+.body-bonus__cover {
+  text-align: center;
+}
+.body-bonus__cover img {
+  max-width: 100%;
+}
+.block-bonus__title {
+  font-weight: 500;
+  font-size: toRem(32);
+  text-align: center;
+  color: #fffcf9;
+}/*# sourceMappingURL=bonus.css.map */

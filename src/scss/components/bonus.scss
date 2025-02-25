@@ -1,5 +1,7 @@
 .bonus {
 padding-top: toRem(30);
+padding-left: toRem(15);
+padding-right: toRem(15);
 
 @media (max-width: $tablet) {
     padding-top: toRem(60);
@@ -7,6 +9,7 @@ padding-top: toRem(30);
     // .bonus__container
 
     &__container {
+        
         position: relative;
         align-content: center;
         padding-top: toRem(32);
@@ -23,6 +26,17 @@ padding-top: toRem(30);
         max-width: toRem(440);
         margin: 0 auto;
 
+
+    @media (max-width: 1250px) {
+        max-width: toRem(770);
+
+    }
+
+    @media (max-width: $tablet) {
+        @include adaptiveValue("padding-top", 300, 250);
+
+    }
+        
     }
     // .bonus__title
 
@@ -35,10 +49,6 @@ margin-bottom: toRem(24);
 
 @include adaptiveValue("font-size", 32, 24);
 
-@media (max-width: $tablet) {
-    @include adaptiveValue("padding-top", 370, 400);
-
-}
     }
 
 
@@ -56,11 +66,12 @@ margin-bottom: toRem(24);
     position: relative;
     @include adaptiveValue("margin-bottom", 34, 24);
 
-    @media (max-width: $tablet) {
+    @media (max-width: 1250px) {
         position: static;
         display: flex;
         flex-direction: column;
         gap: 16px;
+        z-index: 5;
     }
 
     // .content-bonus__method
@@ -70,8 +81,7 @@ margin-bottom: toRem(24);
         padding: toRem(20);
         background-color:  #eaefe3;
         border-radius: toRem(20);
-        max-width: toRem(440);
-
+        // max-width: toRem(440);
         font-weight: 400;
         font-size: toRem(16);
         line-height: 1.5;
@@ -100,7 +110,7 @@ margin-bottom: toRem(24);
         bottom: -20%;
         left: 85%;
 
-        @media (max-width: $tablet) {
+        @media (max-width: 1250px) {
             position: static;
             width: 100%;
         }
@@ -124,7 +134,7 @@ margin-bottom: toRem(24);
         right: -37%;
         bottom: 5px;
 
-        @media (max-width: $tablet) {
+        @media (max-width: 1250px) {
             position: static;
             width: 100%;
         }
@@ -143,43 +153,27 @@ margin-bottom: toRem(24);
 
 
 .block-img {
-    position: absolute;
-    width: toRem(450); 
-    height: toRem(650);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: -20%;
-    left: 5%;
+position: absolute;
+bottom: 70px;
+left: 0;
 
-    @media (max-width: 1310px) {
-        display: none;
-    }
-
-    @media (max-width: $tablet) {
-        display: flex;
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+img {
+    max-width: 100%;
 }
 
-.block-img__shadow {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    transform: rotate(8deg);
-    z-index: 1;
-    
+@media (max-width: 1250px) {
+
 }
 
-.block-img__front {
+@media (max-width: $tablet) {
+    width: toRem(360);
+    display: block;
     position: absolute;
-    left: -15%;
-    top: 5%;
-    width: 100%;
-    height: auto;
-    transform: rotate(-5deg);
-    z-index: 10;
+    text-align: center;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+}
+
