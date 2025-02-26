@@ -26,7 +26,7 @@ mainFunctions.menuInit();
 Документація: https://template.fls.guru/template-docs/modul-spojlery.html
 Сніппет (HTML): spollers
 */
-// mainFunctions.spollers();
+mainFunctions.spollers();
 
 /*
 Модуль "Таби"
@@ -108,6 +108,9 @@ myForms.formFieldsInit({
 /* Модуль роботи з календарем */
 // потрібно встановити залежність npm i js-datepicker
 // import './js/forms/datepicker.js';
+
+/* Модуль роботи лічильника 24/7 */
+// import './js/libs/countdown.js';
 
 // Робота зі слайдером (Swiper) =======================================================================
 /*

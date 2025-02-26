@@ -1,0 +1,34 @@
+.countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #37492c; /* Цвет фона */
+    color: white;
+    padding: 20px 40px;
+    border-radius: 50px;
+    font-family: Arial, sans-serif;
+}
+
+.countdown__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+
+.countdown__item span {
+    font-size: 48px;
+}
+
+.countdown__item p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 5px 0 0;
+    text-transform: uppercase;
+}
+
+.countdown__separator {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 10px;
+}
