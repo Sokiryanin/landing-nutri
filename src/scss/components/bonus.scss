@@ -1,7 +1,9 @@
 .bonus {
 padding-top: toRem(30);
+padding-bottom: toRem(35);
 padding-left: toRem(15);
 padding-right: toRem(15);
+background-color: #fffcf9;
 
 @media (max-width: $tablet) {
     padding-top: toRem(60);

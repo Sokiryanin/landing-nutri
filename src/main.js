@@ -115,7 +115,8 @@ myForms.formFieldsInit({
 Документація плагіна: https://swiperjs.com/
 Сніппет(HTML): swiper
 */
-// import './js/sliders.js';
+
+import './js/sliders.js';
 
 // Модулі роботи з прокручуванням сторінки ==============================================================
 /*
