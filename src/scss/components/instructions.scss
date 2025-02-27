@@ -1,0 +1,92 @@
+.instructions {
+    background-color: #fffcf9;
+    padding-top: toRem(30);
+    padding-bottom: toRem(30);
+    // .instructions__container
+
+    &__container {
+    }
+
+    // .instructions__title
+
+    &__title {
+        font-weight: 500;
+        text-align: center;
+        color: #385030;
+        margin-bottom: toRem(34);
+        @include adaptiveValue("font-size",32, 24);
+    }
+
+    // .instructions__items
+
+    &__items {
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: toRem(16);
+        justify-content: center;
+
+        @media (max-width:$mobile) {
+            
+            flex-wrap: nowrap;
+            flex-direction: column;
+
+        }
+    }
+
+    // .instructions__item
+
+    &__item {
+        position: relative;
+        border-radius: toRem(20);
+        padding: toRem(20) toRem(50);
+        max-width: toRem(270);
+        background: linear-gradient(44deg, #385030 0%, #527647 13.2%, #679358 33.1%, #72a261 53.75%, #7fb66d 77.36%);
+        text-align: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        min-height: toRem(160);
+
+        @media (max-width:$mobile) {
+            
+            max-width: 100%;
+            min-height: auto;
+        }
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 16px;
+            transform: translateX(-50%);
+            width: toRem(40); // Размер иконки
+            height: toRem(40);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    
+        &:nth-child(1)::before {
+            background-image: url("/icons/1.svg"); // Первая иконка
+        }
+    
+        &:nth-child(2)::before {
+            background-image: url("/icons/2.svg"); // Вторая иконка
+        }
+    
+        &:nth-child(3)::before {
+            background-image: url("/icons/3.svg"); // Третья иконка
+        }
+    }
+
+
+    &__item p {
+        font-weight: 400;
+        font-size: toRem(20);
+        color: #385030;
+        color: #fffcf9;
+    }
+}

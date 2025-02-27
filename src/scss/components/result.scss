@@ -24,8 +24,7 @@
 
     // .result__items
 
-    &__items {
-        display: grid;
+        &__items {
         display: flex;
         flex-wrap: wrap;
         gap: toRem(16);

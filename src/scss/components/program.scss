@@ -118,30 +118,8 @@
         background: radial-gradient(280.39% 124.48% at 97.26% 21.57%, #7fb66d 0%, #385030 100%);
 
         @include adaptiveValue("font-size", 32, 20);
-
-        // ._spoller-init & {
-        //     position: relative;
-        //     cursor: pointer;
-
-        //     &::after {
-        //         content: url('../../public/icons/plus.svg');
-        //         position: absolute;
-        //         right: toRem(30);
-        //         width: toRem(24);
-        //         height: toRem(24);
-        //         transition: transform 0.3s ease;
-        //     }
-
-        //     &._spoller-active {
-
-        //         &::after {
-        //             content: url('../../public/icons/minus.svg');
-        //         }
-        //     }
-        // }
-
         &::after {
-            content: url('../../public/icons/plus.svg');
+            content: url('/icons/plus.svg');
             position: absolute;
             right: toRem(30); // Позиционируем ближе к заголовку
             top: 54%;
@@ -160,7 +138,7 @@
     }
 
     details[open] .spollers-program__title::after {
-        content: url('../../public/icons/minus.svg');
+        content: url('/icons/minus.svg');
     }
 
     // .spollers-program__question
