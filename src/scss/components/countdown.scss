@@ -1,34 +1,129 @@
-.countdown {
+//  .countdown {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background-color: #37492c; /* Цвет фона */
+//     color: white;
+//     padding: 20px 40px;
+//     border-radius: 50px;
+//     font-family: Arial, sans-serif;
+// }
+
+// .countdown__item {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     font-weight: bold;
+// }
+
+// .countdown__item span {
+//     font-size: 48px;
+// }
+
+// .countdown__item p {
+//     font-size: 16px;
+//     color: rgba(255, 255, 255, 0.6);
+//     margin: 5px 0 0;
+//     text-transform: uppercase;
+// }
+
+// .countdown__separator {
+//     font-size: 48px;
+//     font-weight: bold;
+//     margin: 0 10px;
+// }
+
+
+.counter {
+    background-color: #fffcf9;
+    // .counter__container
+
+    &__container {}
+
+    // .counter__wrapper
+
+    &__wrapper {
+
+        text-align: center;
+        border-radius: toRem(20);
+
+        background: linear-gradient(47deg, #385030 25.59%, #7fb66d 100%);
+        @include adaptiveValue("padding", 30, 20);
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+            gap: toRem(24);
+            justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+            border-radius: toRem(20);
+            padding: toRem(16);
+            max-width: toRem(700);
+            background-color: #fffcf9;
+        }
+        
+        // .counter__title
+        
+        &__title {
+            font-weight: 700;
+            color: #385030;
+        
+            :nth-child(1) {
+                margin-bottom: toRem(24);
+            }
+        
+            @include adaptiveValue("font-size", 32, 24);
+        }
+        
+        &__title span {
+            font-weight: 400;
+            text-decoration: line-through;
+            color: rgba(132, 143, 128, 0.7);
+            @include adaptiveValue("font-size", 32, 24);
+        }
+
+ // .counter__countdown
+
+ &__countdown {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #37492c; /* Цвет фона */
-    color: white;
-    padding: 20px 40px;
-    border-radius: 50px;
-    font-family: Arial, sans-serif;
+        align-items: center;
+        justify-content: center;
+        
+        
+            background-color: #385030;
+            color: white;
+            padding: toRem(20);
+            border-radius: toRem(20);
+            max-width: toRem(327);
+        
+            @include adaptiveValue("gap", 20, 3);
+        
+        
+        }
 }
 
-.countdown__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: bold;
+.countdown-counter {
+
+    // .countdown-counter__separator
+
+    &__separator {}
+
+    // .countdown-counter__item
+    &__item {
+        color: #fffcf9;
+        font-weight: 600;
+        font-size: toRem(24);
+
+        :nth-child(1) {
+            margin-bottom: toRem(8);
+        }
 }
 
-.countdown__item span {
-    font-size: 48px;
+&__item p {
+    font-weight: 400;
+    font-size: toRem(12);
+    color: rgba(207, 216, 203, 0.7);
 }
-
-.countdown__item p {
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.6);
-    margin: 5px 0 0;
-    text-transform: uppercase;
-}
-
-.countdown__separator {
-    font-size: 48px;
-    font-weight: bold;
-    margin: 0 10px;
 }

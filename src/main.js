@@ -110,7 +110,7 @@ myForms.formFieldsInit({
 // import './js/forms/datepicker.js';
 
 /* Модуль роботи лічильника 24/7 */
-// import './js/libs/countdown.js';
+import './js/libs/countdown.js';
 
 // Робота зі слайдером (Swiper) =======================================================================
 /*

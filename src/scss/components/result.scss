@@ -3,8 +3,8 @@
     background-color: #fffcf9;
     padding-top: toRem(30);
     padding-bottom: toRem(30);
-    padding-left: toRem(15);
-    padding-right: toRem(15);
+    // padding-left: toRem(15);
+        // padding-right: toRem(15);
 
     // .result__container
 
@@ -43,7 +43,7 @@
     }
 
     &__item::before {
-        content: url('../../public/icons/check.svg');
+        content: url('/icons/check.svg');
         position: absolute;
         left: 0;
         top: -10px;
