@@ -1,0 +1,117 @@
+.profit {
+padding-top: toRem(60);
+padding-bottom: toRem(120);
+
+    // .profit__container
+
+    &__container {
+    }
+
+    // .profit__wrapper
+
+    &__wrapper {
+        position: relative;
+        margin: 0 auto;
+        border-radius: toRem(20);
+        max-width: toRem(620);
+        background-color:  #eaefe3;
+        
+
+        // padding-bottom: toRem(190);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: toRem(16);
+        width: 100%;
+        
+        @include adaptiveValue("padding-bottom", 190,90 );
+    }
+
+    // .profit__title
+
+    &__title {
+        border-top-left-radius: 20px;  /* Скругление верхнего левого угла */
+        border-top-right-radius: 20px;
+        width: 100%;
+        padding: toRem(8);
+        background-color: #385030;
+  
+        font-weight: 400;
+        text-align: center;
+        color: #fffcf9;
+        @include adaptiveValue("font-size", 32, 24);
+
+    }
+
+
+    &__content{
+        display: block;
+        padding-left: toRem(20);
+        padding-right: toRem(20);
+    }
+
+        // .profit__list
+    &__list li {
+        position: relative;
+        padding-left: toRem(16); // Отступ под кастомный маркер
+        font-size: toRem(20);
+        color: #385030; 
+        line-height: 1.33;
+
+        &::before {
+            content: "•"; // Используем символ точки
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: toRem(30); // Размер точки
+            color: inherit; // Наследуем цвет от текста
+        }
+    }
+
+    &__bonus{
+        max-width: toRem(404);
+    }
+
+    &__bonus p {
+        position: relative;
+        font-weight: 600;
+        font-size: toRem(16);
+        color: #000;
+        margin-top: toRem(24);
+        padding-left: toRem(40);
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 16px;
+            transform: translateX(-50%);
+            content: "";
+            position: absolute;
+            transform: translateX(-50%);
+            width: toRem(32); // Размер иконки
+            height: toRem(32);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url("../icons/gift.svg");
+        }
+    }
+
+    &__image {
+        position: absolute;
+        bottom: -120px; // Выход за пределы блока вниз на 120px
+        left: 50%;
+        transform: translateX(-50%); // Центрируем по горизонтали
+        width: toRem(500); // Размер иконки
+        height: toRem(320);
+        @include adaptiveValue("width", 500,321 );
+        @include adaptiveValue("height", 320,200 );
+        img {
+            max-width: 100%;
+        }
+
+
+    }
+}
