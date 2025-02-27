@@ -1,0 +1,157 @@
+.reviews {
+    background-color: #fffcf9;
+    padding-top: toRem(30);
+    padding-bottom: toRem(30);
+    text-align: center;
+    // .reviews__conteiner
+
+    &__container {
+        position: relative;
+    }
+
+    &__container::after{
+        z-index: 0;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: toRem(280);
+        height: toRem(680);
+        background: url('img/reviews/cuc.png') no-repeat;
+        background-size: contain;
+        pointer-events: none;
+
+    }
+
+    // .reviews__title
+
+    &__title {
+        font-weight: 500;
+        text-align: center;
+        color: #385030;
+        text-align: center;
+        margin-bottom: toRem(32);
+        @include adaptiveValue("font-size", 32,24 );
+    }
+
+    // .reviews__block
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: toRem(40) toRem(20);
+        border-radius: toRem(20);
+        max-width: toRem(780);
+        background: radial-gradient(147.82% 77.61% at 55.63% 45.08%, rgba(127, 182, 109, 1) 0%, rgba(56, 80, 48, 1) 100%);
+    }
+
+    // .reviews__slider
+
+    &__slider {
+        position: relative;
+        width: 100%;
+
+
+    }
+
+    // .reviews__slider-wrapper
+
+    &__slider-wrapper {
+
+        display: flex;
+        align-items: center;
+
+    }
+
+    // .reviews__slide
+
+    &__slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        width: toRem(48);
+        height: toRem(48);
+        border-radius: 50%;
+        transform: translate(0px, -50%);
+        background: rgba(56, 80, 48, 0.3)  url('/icons/swiper-arrow-left.svg') center no-repeat;
+
+        @media (any-hover: hover){
+            &:hover{
+                background: rgba(189, 201, 185, 0.3);
+    
+            }
+        }
+        @media (max-width: $mobile) {
+            display: none;
+        }
+
+        // .reviews__arrow--right
+        &--left {
+            left: 0;
+        }
+
+        // .reviews__arrow--right
+
+        &--right {
+            right: 0;
+            transform: translate(0px, -50%) rotate(-180deg);
+        }
+    } 
+}
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.slide-reviews {
+}
+.reviews-slide {
+
+    // .reviews-slide__img
+
+    &__img {
+        max-width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+
+.reviews__pagination {
+
+    display: flex;
+    justify-content: center; // Центрируем буллеты по горизонтали
+    align-items: center;
+    gap: toRem(8); // Добавляем расстояние между буллетами
+    width: 100%; // Занимаем всю ширину контейнера
+
+    padding-top: toRem(30);
+  
+  
+    .swiper-pagination-bullet {
+      width: toRem(12);
+      height: toRem(12);
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+  
+    .swiper-pagination-bullet-active {
+      width: toRem(32); // Длинный активный буллет
+      height: toRem(12);
+      border-radius: toRem(10);
+      background-color: #FFFCF9; // Цвет активного буллета
+    }
+  }

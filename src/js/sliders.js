@@ -9,7 +9,7 @@
 // Приклад: { Navigation, Autoplay }
 
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 
 /*
 Основні модулі слайдера:
@@ -47,7 +47,7 @@ function initSliders() {
 
       //touchRatio: 0,
       //simulateTouch: false,
-      //loop: true,
+      loop: true,
       //preloadImages: false,
       //lazy: true,
 
@@ -112,6 +112,7 @@ function initSliders() {
     });
   }
 }
+
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
   let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
@@ -142,9 +143,54 @@ function initSlidersScroll() {
   }
 }
 
-window.addEventListener('load', function (e) {
-  // Запуск ініціалізації слайдерів
-  initSliders();
-  // Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
+// Слайдер для відгуків ==========================================
+
+function initReviewSlider() {
+  // Проверяем, есть ли на странице блок с отзывами
+  if (document.querySelector('.reviews__slider')) {
+    new Swiper('.reviews__slider', {
+      modules: [Navigation, Pagination], // Используем модули
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1, // Показываем только 1 отзыв за раз
+      spaceBetween: 20, // Отступ между слайдами
+      speed: 800, // Скорость перелистывания
+      loop: true,
+      navigation: {
+        prevEl: '.reviews__arrow--left', // Кнопка "назад"
+        nextEl: '.reviews__arrow--right', // Кнопка "вперед"
+      },
+
+      pagination: {
+        el: '.reviews__pagination',
+        clickable: true,
+        type: 'bullets',
+        dynamicBullets: false,
+      },
+
+      // Адаптивные настройки
+      breakpoints: {
+        300: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+        },
+        992: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+}
+
+// Добавляем запуск при загрузке страницы
+
+window.addEventListener('load', function () {
+  initSliders(); // Запуск слайдера сертификатов
+  initReviewSlider(); // Запуск слайдера отзывов
   //initSlidersScroll();
 });
