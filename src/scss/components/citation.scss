@@ -1,0 +1,97 @@
+.citation {
+    background-color: #fffcf9;
+    padding-top: toRem(30);
+    padding-bottom: toRem(30);
+    
+    // .citation__container
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: toRem(80);
+        position: relative;
+
+        @media (max-width:$tablet) {
+            grid-template-columns: auto;
+            grid-gap: toRem(50);
+            justify-content: center;
+        }
+    }
+
+    &__container::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: toRem(410);
+        height: toRem(410);
+        background: url('img/hero/gradient.svg') no-repeat;
+        background-size: contain;
+        @include adaptiveValue("width", 410,310 );
+        @include adaptiveValue("height", 410,310 );
+    }
+
+    // .citation__img
+
+    &__img {
+     
+        max-width: toRem(450);
+        justify-self: end;
+
+        img {
+            max-width: 100%;
+            display: block;
+            mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%);
+            -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%);
+        }
+
+        @media (max-width:$tablet) {
+            justify-self: center;
+            max-width: 100%;
+            img {
+                max-width: 100%;
+            }
+        }
+
+    }
+
+    // .citation__text
+
+    &__text {
+        position: relative;
+        max-width: toRem(597);
+        align-self: center;
+
+
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: toRem(24);
+        color: #385030;
+        line-height: 1.33;
+
+        @include adaptiveValue("font-size", 24, 18);
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -40px;
+            left: -30px;
+            transform: translateX(-50%);
+            width: toRem(50); // Размер иконки
+            height: toRem(50);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url("/icons/quote.svg");
+
+
+            @media (max-width:$tablet) {
+                top: -35px;
+                left: 10px;
+                width: toRem(40);
+                height: toRem(40);
+            }
+        }
+
+        
+    }
+}

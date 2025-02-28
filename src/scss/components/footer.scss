@@ -1,0 +1,138 @@
+.footer {
+    background-color: #fffcf9;
+    padding-top: toRem(30);
+
+    // .footer__container
+
+    &__container {}
+
+    // .footer__body
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        gap: toRem(18);
+
+        @media (max-width: $tablet) {
+            grid-template-columns: auto;
+            justify-content: start;
+            gap: toRem(32);
+        }
+    }
+
+    // .footer__contacts
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(14);
+    }
+
+    // .footer__contacts-text
+
+    &__contacts-text {
+        font-weight: 500;
+        font-size: 24px;
+        color: #385030;
+    }
+
+    // .footer__contacts-tel
+
+    &__contacts-tel {
+        font-weight: 500;
+        font-size: 18px;
+        color: #385030;
+    }
+
+    // .footer__contacts-mail
+
+    &__contacts-mail {
+        font-weight: 500;
+        font-size: 18px;
+        color: #385030;
+    }
+
+    // .footer__contacts-social
+
+    &__contacts-social {}
+
+    // .footer__details
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(14);
+        font-weight: 500;
+        font-size: 18px;
+        color: #385030;
+    }
+
+    // .footer__politic
+
+    &__politic {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(14);
+
+        font-weight: 500;
+        font-size: 18px;
+        color: #385030;
+    }
+}
+
+.social-contacts {
+
+    // .social-contacts__instagram
+
+    &__instagram {}
+
+    // .social-contacts__telegram
+
+    &__telegram {}
+}
+
+.footer__designed {
+    padding-top: toRem(16);
+
+    @media (max-width: $tablet) {
+        padding-top: toRem(32);
+    }
+
+}
+
+.footer__copyright {
+    background: radial-gradient(147.82% 77.61% at 55.63% 45.08%, #7fb66d 0%, #385030 100%);
+    text-align: center;
+    padding: toRem(16);
+    border-radius: toRem(30) toRem(30) 0 0;
+
+    max-width: toRem(320); // Ограничение ширины
+    margin: 0 auto;
+
+    p {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: toRem(8);
+        font-size: toRem(16);
+        font-weight: 700;
+
+        line-height: 1.5;
+        color: #fffcf9;
+
+        // @include adaptiveValue("font-size", 16, 12);
+    }
+
+    a {
+        color: #FFFCF9;
+        text-decoration: underline;
+        transition: all 0.3s ease;
+
+        &:hover {
+            text-decoration: none;
+            opacity: 0.8;
+        }
+    }
+}
