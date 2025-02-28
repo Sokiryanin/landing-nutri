@@ -92,3 +92,17 @@ h6 {
     font-weight: inherit;
     font-size: inherit;
 }
+/* Отключаем стандартные маркеры у <summary> в <details> */
+details summary {
+    list-style: none !important;
+    -webkit-appearance: none !important;
+    /* Для Safari */
+    -moz-appearance: none !important;
+    /* Для Firefox */
+    appearance: none !important;
+}
+
+/* Дополнительно убираем стандартный треугольник в Safari */
+summary::-webkit-details-marker {
+    display: none !important;
+}
