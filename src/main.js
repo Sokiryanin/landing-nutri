@@ -13,7 +13,7 @@ import * as mainFunctions from './js/functions.js';
 // mainFunctions.addTouchClass();
 
 /* Додавання loaded для HTML після повного завантаження сторінки */
-// mainFunctions.addLoadedClass();
+mainFunctions.addLoadedClass();
 
 /* Модуль для роботи з меню (Бургер) */
 mainFunctions.menuInit();
@@ -136,7 +136,7 @@ import './js/sliders.js';
 // import './js/scroll/lazyload.js';
 
 // Спостерігач за об'єктами з атрибутом data-watch
-// import './js/libs/watcher.js';
+import './js/libs/watcher.js';
 
 // Модуль поекранної прокрутки
 // import './js/libs/fullpage.js';
@@ -148,7 +148,7 @@ import './js/sliders.js';
 import * as myScroll from './js/scroll/scroll.js';
 
 // Плавна навігація по сторінці
-// myScroll.pageNavigation();
+myScroll.pageNavigation();
 
 // Функціонал додавання класів до хедеру під час прокручування
 // myScroll.headerScroll();

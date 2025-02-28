@@ -53,6 +53,35 @@
         color: #385030;
     }
 
+&__contacts-tel span,
+&__contacts-mail span {
+    display: inline-block; // Изменено с inline-block на inline
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    color: #385030;
+    transition: color 0.3s ease-in-out;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0; // Размещение линии внизу текста
+        width: 0;
+        height: 2px;
+        background-color: #385030;
+        transition: width 0.3s ease-in-out;
+    }
+
+    &:hover {
+        // color: #000; // Меняем цвет текста при наведении
+
+        &::after {
+            width: 100%; // Линия заполняет текст, а не контейнер
+        }
+    }
+}
     // .footer__contacts-social
 
     &__contacts-social {}
@@ -68,6 +97,7 @@
         color: #385030;
     }
 
+
     // .footer__politic
 
     &__politic {
@@ -79,6 +109,7 @@
         font-size: 18px;
         color: #385030;
     }
+
 }
 
 .social-contacts {
